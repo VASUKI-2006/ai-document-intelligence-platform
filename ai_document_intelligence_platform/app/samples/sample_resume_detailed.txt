@@ -1,0 +1,38 @@
+MEENA S
+Email: meena.s@example.com | Phone: +91 91234 56780
+Location: Chennai, Tamil Nadu | LinkedIn: linkedin.com/in/meena-s-example
+
+PROFILE
+Data analyst with 4 months of internship experience in survey data cleaning, KPI reporting, and dashboard development. Skilled at translating raw datasets into clear visual summaries for business stakeholders. Seeking a full-time analyst role where data can improve operational decisions.
+
+TECHNICAL SKILLS
+SQL, Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn, Data Visualization, Statistics, Google Sheets, Tableau
+
+EDUCATION
+B.Sc. Statistics
+South Valley College, Chennai — 2021 to 2024
+Final Year GPA: 3.7 / 4.0
+
+Certificate in Business Analytics
+Online Learning Academy — 2024
+Covered: SQL for analytics, BI dashboards, business KPIs, Excel modelling.
+
+WORK EXPERIENCE
+Data Analyst Intern — Insight Labs, Chennai
+January 2024 to April 2024
+- Cleaned and validated three survey datasets (5,000+ rows each) in Python using Pandas.
+- Identified and resolved duplicate records, missing values, and formatting inconsistencies.
+- Prepared weekly KPI reports in Excel summarising response rates, satisfaction scores, and trends.
+- Built two Power BI dashboards tracking survey completion and department-level results for internal stakeholders.
+- Documented data cleaning procedures in a shared team Wiki.
+
+PROJECTS
+Retail Sales Dashboard — Power BI
+Analysed a sample retail dataset (12 months, 4 regions) and built an interactive Power BI report covering monthly revenue, product category performance, and regional comparisons. Used DAX measures for year-over-year growth calculations.
+
+Student Performance Analysis — Python / Matplotlib
+Cleaned a public student results dataset, performed exploratory analysis, and visualised score distributions, subject correlations, and pass/fail trends using Matplotlib and Seaborn. Wrote a short findings report.
+
+CERTIFICATIONS
+- SQL for Data Analysis — Mode Analytics, 2023
+- Data Visualisation with Power BI — Microsoft Learn, 2024

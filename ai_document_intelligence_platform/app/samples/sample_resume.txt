@@ -1,0 +1,36 @@
+PRIYA RAMAN
+Email: priya.raman@example.com | Phone: +91 98765 43210
+Location: Theni, Tamil Nadu
+
+PROFESSIONAL SUMMARY
+Entry-level Python developer with hands-on experience building REST APIs, working with databases, and applying machine learning fundamentals. Completed a 2-month internship developing backend features for an asset management system. Interested in data analytics, AI applications, and intelligent document processing.
+
+SKILLS
+Python, FastAPI, Flask, SQL, PostgreSQL, Pandas, NumPy, Machine Learning, Scikit-learn, HTML, CSS, JavaScript, Git, Docker, REST APIs, Linux
+
+EDUCATION
+B.Tech in Artificial Intelligence and Data Science
+Example Institute of Technology, Theni — 2022 to 2026
+CGPA: 8.1 / 10
+
+WORK EXPERIENCE
+Python Developer Intern — ABC Technologies, Coimbatore
+May 2025 to June 2025
+- Designed and implemented REST API endpoints for an internal asset management application.
+- Wrote SQL queries and database migrations for PostgreSQL.
+- Collaborated with a three-person team using Git and GitHub for version control.
+- Tested APIs using Postman and documented endpoint behaviour for teammates.
+
+PROJECTS
+AI Document Search System
+Built a prototype that extracts text from uploaded PDFs using PyMuPDF, chunks the content, and retrieves relevant passages using TF-IDF similarity scoring. Stack: Python, Flask, PyMuPDF.
+
+Asset Management CRUD Application
+Implemented create, read, update, and delete operations for physical assets using Flask and SQLite. Added a simple web interface with HTML, CSS, and JavaScript.
+
+Spam Email Classifier
+Trained a Naive Bayes classifier on a public email dataset (97% test accuracy). Deployed as a small Flask API endpoint.
+
+CERTIFICATIONS
+- Python for Data Science — NPTEL Online Certification, 2024
+- Introduction to Machine Learning — Coursera, 2023

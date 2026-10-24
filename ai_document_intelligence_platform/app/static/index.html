@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocuMind — AI Resume Intelligence</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-icon">✦</span> DocuMind <span class="tag">AI DOCUMENT INTELLIGENCE</span></a>
+    <span class="status"><i></i> Resume analysis workspace</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">DOCUMENT INTELLIGENCE, SIMPLIFIED</div>
+      <h1>Understand every resume.<br><span>Find the details that matter.</span></h1>
+      <p>Upload a resume to generate a grounded summary, structured candidate details, and visual insights — all in one place.</p>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel controls">
+        <div class="section-title"><span class="step">01</span><div><h2>Source document</h2><p>Upload a PDF or text file</p></div></div>
+        <label class="dropzone" id="dropzone" for="fileInput">
+          <div class="upload-icon">↑</div>
+          <strong>Drop your resume here</strong>
+          <span>or click to browse · PDF / TXT · max 10 MB</span>
+          <input id="fileInput" type="file" accept=".pdf,.txt,application/pdf,text/plain">
+        </label>
+        <div class="sample-row"><span>Try a sample</span><select id="sampleSelect"><option value="">Choose sample document…</option></select></div>
+        <div class="file-info" id="fileInfo">No document selected yet.</div>
+        <div class="divider"></div>
+        <div class="section-title"><span class="step">02</span><div><h2>Analysis settings</h2><p>Tailor the output to your needs</p></div></div>
+        <label class="field-label" for="level">Analysis depth</label>
+        <select id="level" class="control-input"><option>Basic</option><option selected>Standard</option><option>Detailed</option></select>
+        <label class="field-label" for="style">Summary style</label>
+        <select id="style" class="control-input"><option>Brief</option><option>Detailed</option><option selected>Bullet points</option></select>
+        <div class="field-label">Focus fields</div>
+        <div class="checks">
+          <label><input type="checkbox" value="Name and email" checked> Name and email</label>
+          <label><input type="checkbox" value="Skills" checked> Skills</label>
+          <label><input type="checkbox" value="Education" checked> Education</label>
+          <label><input type="checkbox" value="Work experience" checked> Work experience</label>
+        </div>
+        <button class="primary" id="analyzeBtn" disabled><span>✦</span> Analyze resume <span class="arrow">→</span></button>
+        <p class="privacy-note">Your document is processed for this request and is not saved by the app.</p>
+      </aside>
+
+      <section class="results" id="results">
+        <div class="empty-state" id="emptyState">
+          <div class="empty-art"><div class="paper">▤</div><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="orbit"></span></div>
+          <h2>Your insights will appear here</h2>
+          <p>Upload a resume or choose a sample, then run your analysis to see summaries, extracted details, and a completeness score.</p>
+          <div class="empty-pills"><span>AI summary</span><span>Structured data</span><span>Visual insights</span></div>
+        </div>
+        <div id="loading" class="loading hidden"><div class="spinner"></div><h2>Reading between the lines</h2><p>Extracting details and preparing your insights…</p></div>
+        <div id="resultContent" class="hidden">
+          <div class="result-heading"><div><div class="eyebrow">ANALYSIS RESULTS</div><h2>Resume overview</h2></div><button class="secondary" id="downloadBtn">↓ Export JSON</button></div>
+          <div class="metric-grid">
+            <div class="metric"><span class="metric-label">COMPLETENESS</span><div class="metric-number"><strong id="score">0%</strong><span class="metric-badge">validated</span></div><div class="progress"><span id="progressBar"></span></div><small id="scoreText">0 of 5 required fields found</small></div>
+            <div class="metric"><span class="metric-label">SKILLS DETECTED</span><div class="metric-number"><strong id="skillCount">0</strong><span class="metric-symbol">✦</span></div><small>Skills supported by source text</small></div>
+            <div class="metric"><span class="metric-label">EXPERIENCE ENTRIES</span><div class="metric-number"><strong id="experienceCount">0</strong><span class="metric-symbol">◷</span></div><small>Potential work history entries</small></div>
+          </div>
+          <div class="panel output-panel"><div class="card-heading"><div><span class="card-icon purple">✦</span><div><h3>AI-generated summary</h3><p id="summaryMeta">Standard analysis</p></div></div><button class="text-button" id="copySummary">Copy text</button></div><div id="summary" class="summary-text"></div><div id="findingsWrap" class="findings hidden"><h4>Key findings</h4><ul id="findings"></ul></div></div>
+          <div class="two-col">
+            <div class="panel output-panel"><div class="card-heading"><div><span class="card-icon blue">▤</span><div><h3>Extracted information</h3><p>Review and edit uncertain or missing values</p></div></div></div><div id="fields" class="fields"></div><div class="edit-actions"><button class="secondary" id="recheckBtn">Recalculate completeness</button><span id="editNote"></span></div></div>
+            <div class="panel output-panel"><div class="card-heading"><div><span class="card-icon orange">▥</span><div><h3>Visual insights</h3><p>Skills and profile breakdown</p></div></div></div><div class="chart-title">Skills identified in resume</div><div id="skillsChart" class="skills-chart"></div><div class="chart-title">Information coverage</div><div id="coverageChart" class="coverage-chart"></div><div class="chart-note">Charts are generated from extracted fields, not invented profile data.</div></div>
+          </div>
+          <div class="panel feedback"><div><h3>Was this analysis useful?</h3><p>Your feedback helps assess result quality.</p></div><div class="feedback-actions"><button data-rating="Helpful">👍 Helpful</button><button data-rating="Partly helpful">👌 Partly helpful</button><button data-rating="Needs improvement">👎 Needs improvement</button></div></div>
+          <div class="notice" id="notice"></div>
+        </div>
+      </section>
+    </section>
+    <footer>DocuMind · AI-assisted resume review <span>Always verify extracted information against the original document.</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

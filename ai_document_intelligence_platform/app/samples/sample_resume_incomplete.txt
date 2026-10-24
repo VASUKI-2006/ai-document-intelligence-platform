@@ -1,0 +1,13 @@
+ARUN KUMAR
+arun.kumar@example.com
+
+EDUCATION
+Bachelor of Computer Applications (BCA)
+Year: Not specified
+
+SKILLS
+Java, SQL, Excel
+
+PROJECT
+Student Attendance Tracker
+Built a simple attendance tracker for a college assignment.
